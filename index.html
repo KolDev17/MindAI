@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind.AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="app.webmanifest">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Indicator -->
+        <div class="status-indicator" id="statusIndicator"></div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                🧠 Mind.AI
+            </div>
+            <button class="settings-btn" id="settingsBtn">⚙️ The Brain</button>
+        </div>
+
+        <!-- Mode Selector -->
+        <div class="mode-selector">
+            <button class="mode-btn memory active" data-mode="memory">🧠 Memory Talks</button>
+            <button class="mode-btn deep" data-mode="deep">🌊 Deep Talks</button>
+            <button class="mode-btn clarify" data-mode="clarify">❓ Clarification</button>
+        </div>
+
+        <!-- Personality Selector -->
+        <div class="personality-section">
+            <span class="personality-label">AI Personality:</span>
+            <select class="personality-select" id="personalitySelect">
+                <option value="use-previous">Use Previous</option>
+                <option value="friendly">Friendly</option>
+                <option value="funny">Funny</option>
+                <option value="drill-sergeant">Drill Sergeant</option>
+            </select>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <!-- Input Area -->
+            <div class="input-container">
+                <textarea class="chat-input" id="chatInput" placeholder="Type your message..."></textarea>
+                <button class="send-btn" id="sendBtn">➤</button>
+            </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div class="modal" id="settingsModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>🧠 The Brain Settings</span>
+                    <button class="close-btn" id="closeSettingsBtn">×</button>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>💾 Memory Bank</h3>
+                    <div id="memoriesList">
+                        <!-- Memories will appear here -->
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>🎭 Personality</h3>
+                    <div id="personalitySettings">
+                        <!-- Personality options -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
